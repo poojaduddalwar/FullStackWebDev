@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Web Development</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        .parent {
+            background-color: cornsilk;
+            border: 3px solid yellow;
+            height: 50%;
+            color: red;
+            height: 100px;
+            font-size: 2.5rem;
         }
-        h1{
-            background-color: red;
-            color: #ffff;
-            padding: 10px;
-            padding-top: 50%;
-            text-align: right;
-            height: 50vh;
+
+        body {
+            height: 80vh;
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-decoration: none;
         }
     </style>
 </head>
-<body>
-    <!-- positioning 
-    text-align : block level property (default-left)
-    
+
+<!--relative font sizing units
+        rem - relative to size of the root(default size)
+        In most modern browsers, 1 rem is equal to 16 pixels. 
+        while making responsive websites use rem instead of em.
+
+    absolute font sizing units
+        em 
+        also 1 em = 16 px 
 -->
-    <h1>Lorem, ipsum.</h1>
+
+<body>
+    <div class="parent">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, alias.
+    </div>
 </body>
+
+</html>
