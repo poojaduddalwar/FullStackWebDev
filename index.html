@@ -16,24 +16,29 @@
         div {
             height: 100px;
             margin: 20px;
+            background-color: orange;
         }
 
         .two {
-            background-color: yellow;
+            background-color: grey;
             position: relative;
         }
 
         h1 {
-            color: white;
-            padding: 10px;
-            text-align: right;
-            height: 50vh;
             background-color: red;
             position: absolute;
             right: 0px;
         }
+
+        img {
+            width: 50px;
+            position: fixed;
+            bottom: 10px;
+            right: 0px;
+        }
     </style>
 </head>
+
 <!-- Positioning Properties
         position: static (default)
         position: relative (relative to itself (to actual positioning when it was static))
@@ -45,11 +50,17 @@
                 right: 0px; 
                 bottom: 0px; 
                 //bottom and right 0 takes the content to the bottom rightmost side or corner.
-                negative value will shift content out of the box -->
-
+                negative value will shift content out of the box 
+            
+        position: fixed (makes element relative to the viewport)
+                        (fixes element into a specific position also when scrolling)
+            
+        position: sticky 
+-->
 
 <body>
-    <h1>lorem </h1>
+
+    <img src="https://www.svgrepo.com/show/352406/robot.svg" alt="">
 
     <div class="two">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore laboriosam rerum earum fugiat? Ratione rerum
@@ -144,6 +155,7 @@
         sapiente quibusdam eius!
         Sed tenetur nemo perspiciatis sunt, vitae debitis fugiat blanditiis! Natus odit earum ad commodi atque. Illum
         corporis sit recusandae.
+        ae debitis
     </div>
 </body>
 
