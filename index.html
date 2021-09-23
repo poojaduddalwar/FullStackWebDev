@@ -6,52 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS DAY 2</title>
     <style>
-        .background-color{
-            background-color: yellow;
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            /* this is the universal selector or star selector.  */
+            /* it basically selects each and every element to it and you can add styles to it which will be applied to each and every element used  */
+            /* in universal selector we add universal styles and they most of the times are margin , padding , box-sizing , font-family. */
+            text-decoration: none;
+            /* generally when we add links using a tag the text inside it is underlined, so text-decoration none removes the underline. */
+        }
+        body{
+            background-color: black;
+        }
+        .background{
+            background-color: aqua;
             width: 250px;
             height: 250px;
-            padding-right: 40px;
-            padding-top: 30px;
-            padding-left: 50px;
-            padding-bottom: 20px;
-            box-sizing: border-box;
-            /* padding: 30px 40px 20px 50px; this is the short hand for writing padding left right bottom and top */
-
-            /* border-box never allows your container to oevrflow /grow up /break until the width and height  values are sane */
-            /* box-sizing: content-box; this is default */
-            /* padding and margin values are not explicit values but are minimum values */
-            /* by changing box-sizing to border-box the height and width are set for the container and not for the content */
+            padding: 50px;
         }
     </style>
 </head>
-
 <body>
-    
-    <div class="background-color">
-        <h2>lorem</h2> 
+    <div class="background">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eius qui asperiores, veniam voluptas quasi eum distinctio at eveniet corrupti.</span>
     </div>
-    <!-- padding is the space between the content and the box or the space between borders and the content. 
-    -internal spacing between elements-->
-    <!-- margin is the spacing between one element and the other element 
-     -external spacing between elements-->
-    <!-- in this example the margin is the space between div and the body. -->
-
-     <!--padding right adds empty space of 50px to the right
-        padding left shift content to right
-        padidng bottom adds empty space of 50px to the bottom
-        padding top shifts the content to bottom
-    -->
-    
-
-    <!-- box sizing is the size of the box -->
-    <!-- by default the box height and width is determined by its margin and padding so if we add margin or padding the box size will increase/decrease depents on what you did-->
-    <!-- so box sizing depend on padding and margin -->
-
-
-    <!--margin shifts the box
-    margin-top: 100000px (enables scrolling)
-    margin-right: 1000000px (no change)
-    margin-left: 1000000px (enables horizontal scrolling)
-    -->
 </body>
 </html>
