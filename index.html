@@ -10,26 +10,37 @@
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
-            /* this is the universal selector or star selector.  */
-            /* it basically selects each and every element to it and you can add styles to it which will be applied to each and every element used  */
-            /* in universal selector we add universal styles and they most of the times are margin , padding , box-sizing , font-family. */
-            text-decoration: none;
-            /* generally when we add links using a tag the text inside it is underlined, so text-decoration none removes the underline. */
         }
-        body{
-            background-color: black;
-        }
-        .background{
+        .parent{
             background-color: aqua;
-            width: 250px;
-            height: 250px;
-            padding: 50px;
+            height: 60px;
+            padding: 20px;
+            width: 80vw;
+        }
+        .child{
+            background-color: purple;
+            height: 20px;
+            width: 80%;
         }
     </style>
 </head>
+<!-- Absolute units - are not dependent on anything 
+eg. px (pixels) -->
+
+<!-- Relative units - are the units which are relative to something
+eg . % ,viewport height , viewport width
+
+viewport height (vh) - sets according to the percenatge
+        of the viewport height (not of the parent)
+viewport width (vw) - sets according to the percentage
+        of the viewport width (not of the parent)
+Percentage (%) - scales element relative to its immediate
+        parent -->
+
+<!-- here block level element is the element that takes up 100% of the parent width -->
 <body>
-    <div class="background">
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eius qui asperiores, veniam voluptas quasi eum distinctio at eveniet corrupti.</span>
+    <div class="parent">
+        <div class="child"></div>
     </div>
 </body>
 </html>
