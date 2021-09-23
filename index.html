@@ -12,35 +12,20 @@
             box-sizing: border-box;
         }
         .parent{
-            background-color: aqua;
-            height: 60px;
-            padding: 20px;
-            width: 80vw;
-        }
-        .child{
-            background-color: purple;
-            height: 20px;
-            width: 80%;
+            background-color: yellow;
+            /* height: 60%;
+            nothing will be visible on the screen as body does not default height */
+            /* the body's height is not defined, therfore an empty 
+div will not take any percentage of the height */
+
+            height: 80vh;
+
+            /* imp: never use % with height until and unless your parent height is set. */
         }
     </style>
 </head>
-<!-- Absolute units - are not dependent on anything 
-eg. px (pixels) -->
-
-<!-- Relative units - are the units which are relative to something
-eg . % ,viewport height , viewport width
-
-viewport height (vh) - sets according to the percenatge
-        of the viewport height (not of the parent)
-viewport width (vw) - sets according to the percentage
-        of the viewport width (not of the parent)
-Percentage (%) - scales element relative to its immediate
-        parent -->
-
-<!-- here block level element is the element that takes up 100% of the parent width -->
 <body>
-    <div class="parent">
-        <div class="child"></div>
+    <div class="parent">lorem
     </div>
 </body>
 </html>
