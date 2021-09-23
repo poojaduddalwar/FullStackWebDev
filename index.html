@@ -10,10 +10,17 @@
             background-color: yellow;
             width: 250px;
             height: 250px;
-            padding-right: 50px;
-            padding-top: 50px;
+            padding-right: 40px;
+            padding-top: 30px;
             padding-left: 50px;
-            padding-bottom: 50px;
+            padding-bottom: 20px;
+            box-sizing: border-box;
+            /* padding: 30px 40px 20px 50px; this is the short hand for writing padding left right bottom and top */
+
+            /* border-box never allows your container to oevrflow /grow up /break until the width and height  values are sane */
+            /* box-sizing: content-box; this is default */
+            /* padding and margin values are not explicit values but are minimum values */
+            /* by changing box-sizing to border-box the height and width are set for the container and not for the content */
         }
     </style>
 </head>
@@ -35,5 +42,9 @@
         padding top shifts the content to bottom
     -->
     
+
+    <!-- box sizing is the size of the box -->
+    <!-- by default the box height and width is determined by its margin and padding so if we add margin or padding the box size will increase/decrease depents on what you did-->
+    <!-- so box sizing depend on padding and margin -->
 </body>
 </html>
