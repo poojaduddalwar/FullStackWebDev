@@ -6,36 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS DAY 2</title>
     <style>
-        div {
-            height: 100px;
-            background-color: aqua;
-        }
-
-        span {
+        .background-color{
             background-color: yellow;
+            margin: 10px;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <!-- for block level element height is not set by default but will have a default width specified to 100 % of the veiwport. -->
-        <h1>Pointers for block</h1>
-        <ol>
-            <li>width of block level element is 100% of veiwport width</li>
-            <li>height of a block level element isn't set by default</li>
-            <li>height & width can be explicitly set using css</li>
-        </ol>
+    <!-- box model says that each and every html element is a box -->
+    <div class="background-color">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta omnis quasi ex necessitatibus nulla dolorum, culpa officia, suscipit maxime molestias expedita, dignissimos qui. Quidem nisi adipisci temporibus fugit eum mollitia.
     </div>
-    <span>
-        <h1>Pointers for inline</h1>
-        <ol>
-            <li>width of block level element is dependent on the content</li>
-            <li>height of a inline element isn't set by default</li>
-            <li>height & width can not be explicitly set using css</li>
-            <li>we cannot add div inside span or span cannot wrap div inside it</li>
-        </ol>
-        <!-- if we take a div inside a span it will take 100 % of width as the div take 100% width and span takes the width of its content -->
-    </span>
+    <span class="background-color">Lorem, ipsum.</span>
+    <table class="background-color">
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+    </table>
+    <a href="" class="background-color">Lorem, ipsum dolor.</a>
+    <b class="background-color">bold</b>
+    
 </body>
 </html>
