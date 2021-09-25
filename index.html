@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS TASK TO CREATE A CARD</title>
+    <title>CSS</title>
     <style>
         *{
             margin: 0;
@@ -12,34 +12,51 @@
             box-sizing: border-box;
         }
         .parent{
-            min-height: 300px;
+            min-height: 500px;
             background-color: black;
             position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center; 
+            /* justify-content property aligns all of its children , but always aligns all elements in the direction of primary axes i.e here the primary direction is flex direction 
+            justify-content is the flex property and works only in primary direction */
+            align-items: center;
+            /* to align elements in secondary axes */
         }
         .child{
             height: 100px;
             width: 150px;
             background-color: orange;
             margin: 10px;
-            display: inline-block;
         }
+        /* .second_child{
+            height: 100px;
+            width: 150px;
+            background-color: orange;
+        } */
+
+        /* in absolute positioning if the child is positioned absolute it will be relative to the parent but not to its sibling means in this if the margin-top is given to .child the margin will start from body not from .second_child */
     </style>
 </head>
 <body>
     <div class="parent">
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-<!-- using flex elements can be aligned in row manner or column manner -->
-<!-- in flex primary axes is the axes in which it is working -->
+        <!-- <div class="second_child"></div> -->
+        <div class="child"></div> 
+        <div style="background-color: red;" class="child"></div> 
+        <div style="background-color: pink;" class="child"></div> 
+<!-- using flexbox elements can be aligned in row fashion or column fashion -->
+<!-- in flex primary axes is the axes in which it is working i.e either x or y / either row or column -->
+
+<!-- Display Properties
+        inline-block : 
+            not block level elements
+            dont take 100% of the element and can change handw
+        Flexbox:
+            it is a parent property 
+            elements aligned either in row or column fashion
+        Flex: default flex-direction :row
+        primary axis: x-axis      
+-->
         
     </div>
 </body>
