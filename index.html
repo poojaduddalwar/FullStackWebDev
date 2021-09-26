@@ -12,47 +12,31 @@
             box-sizing: border-box;
             margin: 4px;
         }
-        .background{
-            color: white;
-        }
-        h1.background{
-            background-color: orange;
-        }
-        h2.background{
-            background-color: black;
-        }
-        h3.background{
+        /* .big{
+            font-size: 2rem;
+        } */
+
+        /* for child selectors */
+        div.parent h1{
             background-color: red;
-        }
-        span.background{
-            background-color: green;
-        }
-        h2.background#unique{
-            background-color: aqua;
         }
     </style>
 </head>
 <body>
-    <!-- combined selectors -->
+    <!-- if your style changes according to the element make sure to use 
+    combined selectors
+    .big : universal style but changes according to the element
 
-    <!-- Combined Selectors
-        combining multiple selectors together
-        selecting items using elements and their class
-        first element-name.class-name eg. h1.background
-        reuses class with various unfamiliar tags
-        use just classname and define properties you want to apply to 
-        all elements of that class
-        assign id to similar tags the name can be same tho
--->
-    <h1 class="background">One</h1>
-    <h2 id="unique"class="background">Two</h2>
-    <h2 class="background">second heading two</h2>
-    <h3 class="background">Three</h3>
-    <!-- <hr>
-    <br>
-    <h1>One</h1>
-    <h2>Two</h2>
-    <h3>Three</h3> -->
-    <span class="background">Lorem ipsum dolor sit.</span>
+    Child Selectors- allow parent to access any element inside it by 
+        defining a scope limited just to the parent -->
+
+    <div class="parent">
+        <div>I am div</div>
+        <h1>one heading</h1>
+        <h1>one heading</h1>
+        <h1>one heading</h1>
+        <h2>two heading</h2>
+        <div>I am div again</div>
+    </div>
 </body>
 </html>
