@@ -13,34 +13,41 @@
             margin: 4px;
             font-family: monospace;
         }
-        h2:nth-child(1){
-            padding: 5px;
-            color: white;
-            background-color: cyan;
-            transition-duration: 0.5s;
-            transition-timing-function: linear;
+        div.parent{
+            background-color: black;
+            min-height: 200px;
         }
-        h2:nth-child(2){
-            padding: 5px;
-            color: white;
+        div.child{
             background-color: orange;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            /* transform: translate(100px); */
+            /* transform: scale(2);  */
+            /* scale(2):scales up
+            scale(0.2):scales down */
+            /* transform: rotateY(91deg); */
             transition-duration: 0.5s;
-            transition-timing-function: linear;
+            /* transition-timing-function: linear; */
+            transition-timing-function: cubic-bezier(0.55, 0.07, 1,-0.52);
+            /* transition-delay: 2s; */
+            /* shorthand for transition  */
+            /* transition: 0.5s ease 2s; */
         }
-        h2:hover{
+        /* transition is an element property */
+        div.parent:hover div.child{
             background-color: red;
-            cursor: pointer;
+            /* transform: rotateY(90deg); */
+            /* transform: scale(0.4); */
+            transform: translateX(500px);
+            /* transform: translateY(500px); */
         }
     </style>
 </head>
 <body>
-    <!-- Transitions and animations: 
-        transitions: changing from one state to another state
-        properties: transitions timings and names 
-            transition-duration: 0.5s;
-            transition-timing-function: linear;
-                                        ease-in; -->
-    <h2>I am heading</h2>
-    <h2>I am heading</h2>
+    <!-- animation is collection of different states -->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
 </body>
 </html>
