@@ -10,39 +10,49 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            margin: 4px;
         }
-        .parent{
-            min-height: 500px;
-            background-color: black;
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            /*wraps elements into multiple lines in case of flex */
-            
+        .background{
+            color: white;
         }
-        .child{
-            min-height: 100px;
-            width: 150px;
+        h1.background{
             background-color: orange;
-            margin: 10px;
+        }
+        h2.background{
+            background-color: black;
+        }
+        h3.background{
+            background-color: red;
+        }
+        span.background{
+            background-color: green;
+        }
+        h2.background#unique{
+            background-color: aqua;
         }
     </style>
 </head>
 <body>
-    <!-- Flex Properties
-        flex-direction: row (puts elements in a row in a flexbox)
-            column (puts elements in a column in a flexbox) -->
-    <div class="parent">
-        <div class="child"></div> 
-        <div style="background-color: red;" class="child"></div> 
-        <div style="background-color: pink;" class="child"></div> 
-        <div class="child"></div> 
-        <div style="background-color: red;" class="child"></div> 
-        <div style="background-color: pink;" class="child"></div> 
-        <div class="child"></div> 
-        <div style="background-color: red;" class="child"></div> 
-        <div style="background-color: pink;" class="child"></div> 
-    </div>
+    <!-- combined selectors -->
+
+    <!-- Combined Selectors
+        combining multiple selectors together
+        selecting items using elements and their class
+        first element-name.class-name eg. h1.background
+        reuses class with various unfamiliar tags
+        use just classname and define properties you want to apply to 
+        all elements of that class
+        assign id to similar tags the name can be same tho
+-->
+    <h1 class="background">One</h1>
+    <h2 id="unique"class="background">Two</h2>
+    <h2 class="background">second heading two</h2>
+    <h3 class="background">Three</h3>
+    <!-- <hr>
+    <br>
+    <h1>One</h1>
+    <h2>Two</h2>
+    <h3>Three</h3> -->
+    <span class="background">Lorem ipsum dolor sit.</span>
 </body>
 </html>
