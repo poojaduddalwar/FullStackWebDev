@@ -12,30 +12,22 @@
             box-sizing: border-box;
             margin: 4px;
         }
-        /* .big{
-            font-size: 2rem;
-        } */
-
-        /* for child selectors */
-        div.parent h1{
-            background-color: red;
+        div.parent div:nth-child(2){
+            background-color: lime;
+        }
+        div.parent div:first-child{
+            background-color: lime;
         }
     </style>
 </head>
 <body>
-    <!-- if your style changes according to the element make sure to use 
-    combined selectors
-    .big : universal style but changes according to the element
-
-    Child Selectors- allow parent to access any element inside it by 
-        defining a scope limited just to the parent -->
+    <!-- nth child selector:
+    flexibility to select only one child from the parent
+    select the given position of child from the colletion of elements     -->
 
     <div class="parent">
         <div>I am div</div>
-        <h1>one heading</h1>
-        <h1>one heading</h1>
-        <h1>one heading</h1>
-        <h2>two heading</h2>
+        <div>I am second div</div>
         <div>I am div again</div>
     </div>
 </body>
