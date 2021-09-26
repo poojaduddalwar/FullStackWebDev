@@ -17,47 +17,32 @@
             position: relative;
             display: flex;
             flex-direction: row;
-            justify-content: center; 
-            /* justify-content property aligns all of its children , but always aligns all elements in the direction of primary axes i.e here the primary direction is flex direction 
-            justify-content is the flex property and works only in primary direction */
-            align-items: center;
-            /* to align elements in secondary axes */
+            flex-wrap: wrap;
+            /*wraps elements into multiple lines in case of flex */
+            
         }
         .child{
-            height: 100px;
+            min-height: 100px;
             width: 150px;
             background-color: orange;
             margin: 10px;
         }
-        /* .second_child{
-            height: 100px;
-            width: 150px;
-            background-color: orange;
-        } */
-
-        /* in absolute positioning if the child is positioned absolute it will be relative to the parent but not to its sibling means in this if the margin-top is given to .child the margin will start from body not from .second_child */
     </style>
 </head>
 <body>
+    <!-- Flex Properties
+        flex-direction: row (puts elements in a row in a flexbox)
+            column (puts elements in a column in a flexbox) -->
     <div class="parent">
-        <!-- <div class="second_child"></div> -->
         <div class="child"></div> 
         <div style="background-color: red;" class="child"></div> 
         <div style="background-color: pink;" class="child"></div> 
-<!-- using flexbox elements can be aligned in row fashion or column fashion -->
-<!-- in flex primary axes is the axes in which it is working i.e either x or y / either row or column -->
-
-<!-- Display Properties
-        inline-block : 
-            not block level elements
-            dont take 100% of the element and can change handw
-        Flexbox:
-            it is a parent property 
-            elements aligned either in row or column fashion
-        Flex: default flex-direction :row
-        primary axis: x-axis      
--->
-        
+        <div class="child"></div> 
+        <div style="background-color: red;" class="child"></div> 
+        <div style="background-color: pink;" class="child"></div> 
+        <div class="child"></div> 
+        <div style="background-color: red;" class="child"></div> 
+        <div style="background-color: pink;" class="child"></div> 
     </div>
 </body>
 </html>
