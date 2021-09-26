@@ -11,24 +11,54 @@
             padding: 0;
             box-sizing: border-box;
             margin: 4px;
+            font-family: monospace;
         }
-        div.parent div:nth-child(2){
+        h2{
+            padding: 5px;
+            color: white;
+            background-color: orange;
+        }
+        h2:hover{
+            background-color: red;
+            cursor: pointer;
+        }
+        div::selection{
             background-color: lime;
         }
-        div.parent div:first-child{
-            background-color: lime;
+        input:focus{
+            background-color: pink;
+            color: red;
+            font-size: 4rem;
+        }
+
+        h2::after{
+            content: "my name is pooja";
+            font-size: 4rem;
+            color: yellow;
+            position: relative;
+        }
+        
+        h2::before{
+            content: "my name is nisha";
+            font-size: 6rem;
+            color: purple;
+            position: relative;
         }
     </style>
 </head>
 <body>
-    <!-- nth child selector:
-    flexibility to select only one child from the parent
-    select the given position of child from the colletion of elements     -->
+    <!-- pseudo selectors : allows you to select elements depending on the states 
+    eg- :hover, ::selection, :focus-->
 
-    <div class="parent">
-        <div>I am div</div>
-        <div>I am second div</div>
-        <div>I am div again</div>
-    </div>
+    <!-- Before, After Pseudo selectors
+    after pseudo selector- adds content after our tags 
+    can control styles of the content with css
+    before pseudo selector- adds content before our tags 
+    can control styles of the content with css -->
+
+
+    <h2>I am heading</h2>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quaerat enim labore molestias? Minima, exercitationem? Atque quia quisquam obcaecati dolorem vel magni, culpa repudiandae, illum saepe corrupti tempora architecto inventore.</div>
+    <input type="text">
 </body>
 </html>
