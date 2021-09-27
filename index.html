@@ -6,73 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List Day</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        div.parent {
-            height: 500px;
-            background-color: black;
-        }
-
-        div.child {
-            width: 100px;
-            height: 100px;
-            background-color: orange;
-            border-radius: 50%;
-            /* transition: 1s ease; */
-            /* transition is an element property not the state property*/
-            animation: 1s move ease;
-            animation-fill-mode: forwards;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-
-        }
-        div.child-2 {
-            width: 100px;
-            height: 100px;
-            margin: 100px;
-            background-color: orange;
-            border-radius: 50%;
-            /* transition: 1s ease; */
-            /* transition is an element property not the state property*/
-            animation: 1s move ease;
-            animation-fill-mode: forwards;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-delay: 1s;
-
-        }
-
-        /* div.parent:hover div.child { */
-            /* transform: translateX(80vw); */
-            /* animation: 1s move ease;
-            animation-fill-mode: forwards; */
-        /* } */
-
-        /* animation : */
-        /* animation is the state property */
-        /* to create an animation we use the below keyframe */
-        /* we need frames for the animation to work  */
-        /* here move is the name */
-        /* in css frames are the points of completion */
-        @keyframes move {
-            0% {
-                transform: translateY(0vw);
-            }
-            50%{
-                transform: translate(300px, 200px);
-                background-color: cyan;
-            }
-            100% {
-                transform: translateY(400px);
-                background-color: crimson;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
