@@ -2,64 +2,38 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: unset;
+    /* this is used because while using anchor tag the text inside it comes out in blue color . */
+    font-family: "Poppins";
 }
 
-div.parent {
-    height: 500px;
-    background-color: black;
+header{
+    background-image: url('./assets/day.jpeg');
+    height: 300px;
+    background-size: cover;
+    /* image fits in using this */
+    background-position: center;
+    /* this fixes its position at the center  */
 }
 
-div.child {
-    width: 100px;
-    height: 100px;
-    background-color: orange;
-    border-radius: 50%;
-    /* transition: 1s ease; */
-    /* transition is an element property not the state property*/
-    animation: 1s move ease;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+/* footer styles  */
 
-}
-div.child-2 {
-    width: 100px;
-    height: 100px;
-    margin: 100px;
-    background-color: orange;
-    border-radius: 50%;
-    /* transition: 1s ease; */
-    /* transition is an element property not the state property*/
-    animation: 1s move ease;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-delay: 1s;
-
+img.social{
+    width: 20px;
+    margin: 0px 10px;
 }
 
-/* div.parent:hover div.child { */
-    /* transform: translateX(80vw); */
-    /* animation: 1s move ease;
-    animation-fill-mode: forwards; */
-/* } */
-
-/* animation : */
-/* animation is the state property */
-/* to create an animation we use the below keyframe */
-/* we need frames for the animation to work  */
-/* here move is the name */
-/* in css frames are the points of completion */
-@keyframes move {
-    0% {
-        transform: translateY(0vw);
-    }
-    50%{
-        transform: translate(300px, 200px);
-        background-color: cyan;
-    }
-    100% {
-        transform: translateY(400px);
-        background-color: crimson;
-    }
+footer{
+    background-color: #f1f1f1;
+    color: #4f4dde;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1.2rem;      
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
