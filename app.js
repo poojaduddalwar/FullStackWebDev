@@ -1,20 +1,15 @@
-// console.log("hello")
-// console.warn("hello warning")
-// console.error("hello error")
+//to declare variable
+var age = null
+console.log(age)
+console.log(typeof age)
 
-console.log(typeof "hello")
-console.log(typeof 'j')
-// these are String
+// null is a value , its an empty space but undefined is something which was not defined or does not have any value.
 
-//Numbers
-console.log(typeof 1)
-console.log(typeof 1.2)
-console.log(typeof 12455887512115232115221115152)
-console.log(typeof -1)
-console.log(typeof -1.2)
 
-//boolean
-console.log(typeof false)
-console.log(typeof true)
-// here t and f of true and false should be small 
-
+var arr = [1,2,3,4]
+console.log(arr)
+console.log(typeof arr)
+console.log(arr.length)
+arr.push(6)
+console.log(arr)
+console.log(arr.length)
