@@ -1,65 +1,32 @@
-const age = 10
-// you cannot re-asign a value to a const variable
+var Heading = document.getElementById("heading")
+var Para = document.getElementsByClassName("para")
+var tags = document.getElementsByTagName("a")
+var query = document.querySelector('#heading')
+var query1 = document.querySelectorAll('.para')
+var Body = document.querySelector("body")
+// as id is unique so getElementById returns only single thing
+// but class are not unique so getElementsByClassName so returns all the things which uses the class "para"
 
-//Operators
-//Arithematic operators
-var a =2
-var b= 10
-console.log('a+b=',a+b)
-console.log('a-b=',b-a)
-console.log('a/b=',b/a)
-console.log('a*b=',a*b)
-console.log('a**b=',a**b)
-console.log('a%b=',a%b)
+// Heading.innerHTML = "hello pooja"
+// innerHTML is a method provided by the DOM api and is used to replace the content provided with the actual content
 
-//Assignment operators
-b = 11
-console.log('b',b)
-b +=1
-console.log('b',b)
-b++
-console.log('b',b)
-b-=1
-console.log('b',b)
-b--
-console.log('b',b)
+console.log(Heading)
+console.log(Para.length)
+console.log(Para[0])
+console.log(Para[1])
+console.log(Para)
+console.log(tags)
+console.log(query)
+console.log(query1)
 
-var c = 10
-console.warn(c++)   //this is post increment
-console.warn(c)
-console.warn(++c)  //this is pre increment
+// Para.push("pooja")
 
-// Comparison operators
-//these always return a boolean
-var d = 14
-var e = 2
-var f = 14
+Heading.innerHTML="hello"
+Heading.style = "color:red ; font-size:4rem;"
 
-console.log(d>e)
-console.log(d<e)
-console.log(d>=e)
-console.log(d<=e)
-console.log(d==e)
+Heading.classList.add("five")
+Heading.classList.remove("one")
 
-console.warn(d!=f)
-console.warn(d==f)
-//double = is a loose check
-console.log(d===f)
-//here triple = also checks data types . its a strict check
-console.log(d+f)
+console.log(Heading.classList)
 
-//logical operators
-
-console.log('true && true = ',true&&true)
-console.log('true && false = ',true&&false)
-console.log('false && true = ',false&&true)
-console.log('false && false = ',false&&false)
-
-console.log('true || true = ',true&&true)
-console.log('true || false = ',true&&false)
-console.log('false || true = ',false&&true)
-console.log('false || false = ',false&&false)
-
-
-
-
+Body.classList.add("dark")
