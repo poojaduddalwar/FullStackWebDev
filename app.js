@@ -1,32 +1,22 @@
-// console.log(add(10,20))
+//Call back function
+//executed after something is completed
+// Calls a defined callback function on each element of an array, and returns an array that contains the results
 
-// var add = function(a=0,b=0){
-//     console.log("pd")
-//     var sum = a+b
-//     return sum
+var arr = ['go to gym','eat food','clean house']
+
+// for(var i=0; i<arr.length ; i++){
+//     console.log(arr[i])
 // }
-// // console.log(add(10,20))
 
-// function add(a=0,b=0){
-//     console.log("declaration")
-//     var sum = a+b
-//     return sum
+// arr.forEach() = this is a array method that allows to iterate over each element of the array.its a call back function
+// var CallBackFunction = (element)=> {
+//     console.log("i ran "+element)
+// // here instead of element we can use any name
 // }
-// console.log(add(10,20))
+// arr.forEach(CallBackFunction)
 
-
-
-//arrow function shortcut
-
-// var add = (a=0,b=0) => a+b
-// console.log(add(10,20))
-
-// var add = (a=0,b=0) => {
-//     return a+b
-// }
-// console.log(add(20,20))
-
-// const greet = Name => "hi "+ Name
-// console.log(greet("pooja"))
-
+//shorthand for above
+arr.forEach((element , index) => {
+    console.log(element,index)
+})
 
