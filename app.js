@@ -1,11 +1,27 @@
-var button = document.querySelector('button')
-var body = document.querySelector('body')
+const a = document.querySelectorAll('input')[0]
+const b = document.querySelectorAll('input')[1]
+const Add = document.getElementById('add')
+const Multiply = document.querySelectorAll('#multiply')[0]
+// const resultBox = document.querySelector('span')
+const resultBox = document.querySelector('.result')
 
+// console.log(a,b)
+// console.log(Add,Multiply)
+// console.log(Result)
 
-const callBackFunc = (event) => {
-    // body.classList.add('dark')
-    body.classList.toggle('dark')
-    // toggle = removing it if it's present and adding it if it's not present.
+const addFunction = () => {
+    const Result = parseInt(a.value) + parseInt(b.value)
+    // console.log(Result)
+    resultBox.innerHTML = Result
 }
 
-button.addEventListener('click',callBackFunc)
+const multiplyFunction = () => {
+    const MResult = parseInt(a.value)*parseInt(b.value)
+    resultBox.innerHTML = MResult
+
+}
+
+// parseInt = converts string to int 
+
+Add.addEventListener('click',addFunction)
+Multiply.addEventListener('click',multiplyFunction)
