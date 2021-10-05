@@ -1,35 +1,44 @@
-var button = document.querySelector('button')
-var input = document.querySelector('input')
-var list = document.querySelector('ul')
+// api => application programming interface. 
 
-var chores = []
-// console.log(chores.includes('gym'))
-// here the includes method is used to see weather the element is present in the array or not 
+// let => this keyword is also used to declare a variable. 
+// when you declare a variable using let the scope of that variable is only inside that block in which it is declared i.e it won't be defined outside of that block i.e the variable has the block scope
+// let a = 30
+// var b = 40
+// console.log(a,b)
+//when we declare a variable using var it has global scope i.e your whole file
 
-// var deleteItem = (value) => {
-//     const index = chores.indexOf(value)
-//     // indexOf method returs the index of the element that you specified . it is a built-in method
-//     chores.splice(index,1)
-//     console.log(chores)
+// if(true){
+//     let Name = 'pooja'
+//     console.log(Name)
 // }
+// console.log(Name)
 
-const callBackFunc = (event) => {
-    // console.log(input.value)
-    const inputValue = input.value
-    if(chores.includes(inputValue)){
-        console.log('already exixts')
+// for(let i=0 ; i < 10 ; i++){
+//     console.log('loop')
+// }
+// console.log(i)
+
+
+// if(true){
+//     let Name = 'pd'
+//     if(true){
+//         console.log(Name)
+//     }
+// }
+// you can access a parent scope within a child but not the child scope within parent
+// here Name is declared using let still the value is printing because the other if statement is the child of the first if statement
+
+
+const print = ()=> {
+    var Name = 'pooja'
+    if(true){
+        console.log(Name)
     }
-    else{
-        chores.push(inputValue)
-        const element = document.createElement("li")
-        const textNode = document.createTextNode(inputValue)
-        element.appendChild(textNode)
-        list.appendChild(element)
-        // element.addEventListener('click', (e) => {console.log(e.target.innerHTML)})
-        // element.addEventListener('click', (e) => {deleteItem(e.target.innerHTML)})
-
-        element.addEventListener('click', (e) => {e.target.remove()})
-    }       
+    return Name
 }
+print()
+// console.log(Name)
 
-button.addEventListener('click',callBackFunc)
+// incase of functions global scope does not exists if.e if you declare a variable using var let it is also a local scope
+// you can nest as many scopes as you want
+// const is similar to a let
