@@ -1,32 +1,17 @@
-// console.log(this)
-// // this is a keyword => it is window object . this point to the parent object. here this is pointing to the window object
-// console.log(this.alert('hi'))
+//template string
 
-
-//creating objects
-//literal notation
-let manufacturer = 'ferrari'
-let car = {      //object
-    Name:"c class",  //key value pair
-    manufacturer:"mercedes",
-    // print: function (a){  //print = method
-    //     console.log(a)
+let car = {
+    a: "c class",
+    b: "mercedes",
+    // print: function () {
+    //     console.log(`${this.a} was created by ${this.b}`)   //`` this is the template string . it is a part of es6. in back ticks use $ sign to use a variable.
     // }
-    print: function(){
-        let manufacturer = 'bmw'
-        //console.log(this)  //here this is pointing to the object car
-        // console.log(manufacturer)
-        // console.log(car.manufacturer,car.Name)
-        console.log(this.Name,this.manufacturer)
-        console.log(this.manufacturer)
-    }
-// a function inside an object is a method 
-}
-// car.print('pooja')
-// console.log(car.manufacturer)
-// console.log(typeof(car))
-// console.log(car)
-car.print()
-// console.log(car.print("ckcshbchdbc"));
 
-// in js we have prototype inheritance
+    print: () =>{
+        console.log(this) //here this points to the window
+        // this keyword in arrow syntax always points to the window object while this in the function declaration will change accordingly.
+        console.log(`${car.a} was created by ${car.b}`)
+    }
+}
+
+car.print()
