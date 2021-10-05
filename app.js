@@ -1,17 +1,16 @@
-//template string
+//object methods
 
 let car = {
-    a: "c class",
-    b: "mercedes",
-    // print: function () {
-    //     console.log(`${this.a} was created by ${this.b}`)   //`` this is the template string . it is a part of es6. in back ticks use $ sign to use a variable.
-    // }
-
+    a: "pooja",
+    b: "duddalwar",
     print: () =>{
-        console.log(this) //here this points to the window
-        // this keyword in arrow syntax always points to the window object while this in the function declaration will change accordingly.
-        console.log(`${car.a} was created by ${car.b}`)
+        console.log(`${this.a} girish ${this.b}`)
     }
 }
 
-car.print()
+console.log(Object.values(car))  //o/p : (3) ['pooja', 'duddalwar', ƒ]
+console.log(Object.keys(car))   //o/p : (3) ['a', 'b', 'print']
+console.log(car.hasOwnProperty('a'))  //hasOwnProperty property is used to make sure that the property exists on your object or not
+// console.log(Object)
+// Object: it is the global object
+// all the objects which we create are a kind of children of this global object
