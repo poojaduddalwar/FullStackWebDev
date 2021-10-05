@@ -1,44 +1,32 @@
-// api => application programming interface. 
-
-// let => this keyword is also used to declare a variable. 
-// when you declare a variable using let the scope of that variable is only inside that block in which it is declared i.e it won't be defined outside of that block i.e the variable has the block scope
-// let a = 30
-// var b = 40
-// console.log(a,b)
-//when we declare a variable using var it has global scope i.e your whole file
-
-// if(true){
-//     let Name = 'pooja'
-//     console.log(Name)
-// }
-// console.log(Name)
-
-// for(let i=0 ; i < 10 ; i++){
-//     console.log('loop')
-// }
-// console.log(i)
+// console.log(this)
+// // this is a keyword => it is window object . this point to the parent object. here this is pointing to the window object
+// console.log(this.alert('hi'))
 
 
-// if(true){
-//     let Name = 'pd'
-//     if(true){
-//         console.log(Name)
-//     }
-// }
-// you can access a parent scope within a child but not the child scope within parent
-// here Name is declared using let still the value is printing because the other if statement is the child of the first if statement
-
-
-const print = ()=> {
-    var Name = 'pooja'
-    if(true){
-        console.log(Name)
+//creating objects
+//literal notation
+let manufacturer = 'ferrari'
+let car = {      //object
+    Name:"c class",  //key value pair
+    manufacturer:"mercedes",
+    // print: function (a){  //print = method
+    //     console.log(a)
+    // }
+    print: function(){
+        let manufacturer = 'bmw'
+        //console.log(this)  //here this is pointing to the object car
+        // console.log(manufacturer)
+        // console.log(car.manufacturer,car.Name)
+        console.log(this.Name,this.manufacturer)
+        console.log(this.manufacturer)
     }
-    return Name
+// a function inside an object is a method 
 }
-print()
-// console.log(Name)
+// car.print('pooja')
+// console.log(car.manufacturer)
+// console.log(typeof(car))
+// console.log(car)
+car.print()
+// console.log(car.print("ckcshbchdbc"));
 
-// incase of functions global scope does not exists if.e if you declare a variable using var let it is also a local scope
-// you can nest as many scopes as you want
-// const is similar to a let
+// in js we have prototype inheritance
