@@ -1,23 +1,30 @@
-var Input = document.querySelector('input')
-var Button = document.querySelector('button')
-// var Div =document.querySelector('div')
+//day 8 revision
 
-// const callBackFun = ()=> {
-//     var inputText = Input.value
-//     Div.innerHTML = inputText
-// }
-
-const getData = async (item) => {
-    console.log(item)
-    let url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
-    const res = await fetch(url)
-    const data = await res.json()
-    console.log(data.hits)
-}
-
-// Button.addEventListener('click', ()=> {
-//     console.log(Input.value)
+// let greet = new Promise ((resolve,reject)=> {
+//     setTimeout(() => {
+//         resolve("welcome")
+//     }, 5000);
 // })
 
+// console.log(greet)
+// setTimeout(() => {
+//     console.log(greet)
+// }, 6000);
 
-Button.addEventListener('click', (e) => { getData(Input.value) })
+// greet.then(value =>{
+//     console.log(value)
+//     return "new welcome"   //now the next .then will return this value
+// }).then(newValue => {
+//     console.log(newValue)
+// }) //this .then will return undefined because the previous .the does not return anything
+
+
+let response = fetch('https://jsonplaceholder.typicode.com/todos/10')
+// fetch is used to make a get request to the url to send the data and fetch returns a promise 
+// console.log(response)
+response.then(value => {
+    return(value.json())
+    // json() returns a Promise because it takes some time , its a asynchronous task and js can't complete it
+}).then(content => {
+    console.log(content)
+})
