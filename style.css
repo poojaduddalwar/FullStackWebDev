@@ -44,10 +44,12 @@ body {
     background-color: #ededed;
     padding-top: calc(100% * 1.18);
     transition: all 0.3s ease-out 0.1s;
+    height: 11rem;
   }
   .card__info {
     padding: 0 10px;
     margin-bottom: 10px;
+    /* height: max-content; */
   }
   .card__info h2 {
     font-size: 14px;
@@ -64,10 +66,11 @@ body {
   }
   .card__price {
     height: 30px;
-    padding: 0 10px 0 20px;
+    padding: 10px 10px 0 20px;
     font-size: 14px;
     display: flex;
     align-items: center;
+    /* justify-content: last baseline; */
     font-weight: 800;
   }
   .card__add {
