@@ -34,5 +34,7 @@ const getData = async (item) => {
     })
 }
 
-Button.addEventListener('click', (e) => { getData(Input.value) })
+Button.addEventListener('click', (e) => { 
+    parent.innerHTML = ''
+    getData(Input.value) })
 
