@@ -13,6 +13,8 @@ localStorage.setItem('val',JSON.stringify(arr))
 // JSON.parse()//converts string to object
 console.log(JSON.parse(localStorage.getItem('val')))
 
+// in localStorage we can only store string so to store a object we use stringify method and parse method to get it converted back to the state before using stringify. 
+
 // div.innerHTML = localStorage.getItem('InputValue')
 // console.log(button,div,input)
 // Button.addEventListener('click',(req,res)=>{
