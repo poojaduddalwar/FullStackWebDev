@@ -1,33 +1,29 @@
-// NODE-JS 
+// local storage : it source storage provided by the browser
+const Button = document.querySelector('button')
+const input = document.querySelector('input')
+const div = document.querySelector('div')
 
-// library is a collection of methods..... they allow us to utilize a certain functionality (reusable functions)
-// node-js is a runtime environment for js . runtime environment is environment to run . nodejs internally uses v8 engine
-// nodejs brings multiple support of libraries and packages and also a runtime environment nad some other modules as well
+// const arr = localStorage.getItem('InputValue')
+const arr =[1,2,3,4,5,6]
+// localStorage.setItem('val',arr)
+// console.log(localStorage.getItem('val'))
+// JSON.stringify(arr)  //converts to string 
+localStorage.setItem('val',JSON.stringify(arr))
+// console.log(localStorage.getItem('val'))
+// JSON.parse()//converts string to object
+console.log(JSON.parse(localStorage.getItem('val')))
 
-// console.log(window)
-// for(var i = 0;i<10;i++){
-//     console.log("iteration",i+1)
-// }
+// div.innerHTML = localStorage.getItem('InputValue')
+// console.log(button,div,input)
+// Button.addEventListener('click',(req,res)=>{
+//     localStorage.setItem('InputValue',[1,2,3,4])
+//     div.innerHTML = input.value
+// })
 
-// setTimeout(() => {
-//     console.log('pooja')
-// }, 5000);
+// console.log(localStorage)
+// localStorage.setItem('InputValue','something') //always in key and value pair
+// setItem is use to set anything in the localStorage
 
-//Module - file that contains the code
-// it is an encapsulated block of code 
-// const greet = () => 'hi'
-// module.exports.something = greet  // this adds the greet funtion inside the exports object
-// console.log('i am app1.js')  
+// console.log(localStorage.getItem("InputValue")) // to get an item from localStorage
 
-
-// const stuff = require('./utils')
-
-// console.log(stuff)
-
-const {add,subtract,multiply,divide,message} = require('./utils')
-
-add()
-subtract()
-multiply()
-divide()
-console.log(message)
+// localStorage.clear()  //to clear 
