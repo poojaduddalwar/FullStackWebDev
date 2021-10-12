@@ -1,31 +1,27 @@
-// local storage : it source storage provided by the browser
-const Button = document.querySelector('button')
-const input = document.querySelector('input')
-const div = document.querySelector('div')
+const path = require('path') //used to utilize the built in modules
+// console.log(path)  //path module exists to help you with paths in node js 
 
-// const arr = localStorage.getItem('InputValue')
-const arr =[1,2,3,4,5,6]
-// localStorage.setItem('val',arr)
-// console.log(localStorage.getItem('val'))
-// JSON.stringify(arr)  //converts to string 
-localStorage.setItem('val',JSON.stringify(arr))
-// console.log(localStorage.getItem('val'))
-// JSON.parse()//converts string to object
-console.log(JSON.parse(localStorage.getItem('val')))
+//Methods of path module
 
-// in localStorage we can only store string so to store a object we use stringify method and parse method to get it converted back to the state before using stringify. 
+//1
+console.log(path.resolve('./app1.js'))  //converts relative path to the absolute path
 
-// div.innerHTML = localStorage.getItem('InputValue')
-// console.log(button,div,input)
-// Button.addEventListener('click',(req,res)=>{
-//     localStorage.setItem('InputValue',[1,2,3,4])
-//     div.innerHTML = input.value
-// })
+//2
+console.log(path.relative('/','./temp/utils.js'))
+//here it give the path from /(root) to the GIT folder
+// tells the location of GIT folder relative to root 
+//Solve the relative path from {from} to {to}. At times we have two absolute paths, and we need to derive the relative path from one to the other. This is actually the reverse transform of path.resolve.
 
-// console.log(localStorage)
-// localStorage.setItem('InputValue','something') //always in key and value pair
-// setItem is use to set anything in the localStorage
+//3
+console.log(path.extname('./app1.js'))
+//this gives the extension name of the path
 
-// console.log(localStorage.getItem("InputValue")) // to get an item from localStorage
+//4
+console.log(path.dirname('./FullStackWebDev1/utils.js'))
+//this gives the parent directory name where the file is
 
-// localStorage.clear()  //to clear 
+//5
+console.log(__dirname)
+//this keyword give the directory name of the file we are using (app1.js)
+
+console.log(path.join(__dirname, 'app1.js'))  //joins file with current directory.
