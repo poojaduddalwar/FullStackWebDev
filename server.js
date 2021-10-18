@@ -3,34 +3,38 @@ const express = require('express')
 const PORT = 3000
 const app = express()  //instatiate
 
-// console.log(express)
-//1. post request from chrome doesn't work- because browser only sends get request
 
-app.get('/',(req,res)=>{
+// 1. Headers of request contain additional info about request.
+
+app.get('/', (req, res) => {
     console.log(req.headers)
-    res.send('get')
+    res.send("GET")
 })
 
-app.post('/',(req,res) =>{
-    res.send('post')
+//2. Basic security to check from where(user-agent) request is coming?
+// If a request is legit that means get request which we have allowed - that means from thunderclient but not chrome(browsers)
+app.get('/', (req, res) => {
+    console.log(req.headers['user-agent'])
+    if (req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io)") res.send("GET")
+    else res.send("BLOCKED")
 })
 
-//2. Different kind of request- with express using thunderclient works well.
+//3. Middleware - a more logical way for security check.
+// checks if request is from thunder client if yes moves it ahead to callback otherwise show blocked.
+// the middleware function which here is verify. so when a request comes in this middleware runs and here next() moves the request to the callback if the user agent is thunder client 
 
-app.put('/',(req,res) =>{
-    res.send('put')
+const verify = (req, res, next) => {
+    if (req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io)") next()
+    else res.send("BLOCKED")
+}
+
+app.get('/', verify, (req, res) => {
+    //console.log(req)
+    res.send("Hi!")
 })
 
-app.delete('/',(req,res) =>{
-    res.send('delete')
-})
 
-app.patch('/',(req,res) =>{
-    res.send('patch')
-})
-
-
-app.listen(PORT,() => {
+app.listen(PORT, () => {
     console.log(`Server running at port :${PORT}`)
 })
 
