@@ -1,18 +1,23 @@
-const express = require('express')
+const express =require('express')
+const app = express()
 const PORT = 3000
-const app = express()  //instatiate
 
-app.use(express.json())
-//app.use allows us to use middleware with each and every express request
+const Logger = (req,res,next)=>{
+    console.log(req.method)//req.method tells what type of request is made is it get push or anything else.
+    next()
+}
 
-//in headers the Content-Type header is used to tell the browser what type of content is there in the body . the application/json tells that the content-type is a json file
+app.use(Logger,express.json()) //it is a method and it add middleware in each and every request instead of we adding manualy a middleware in each request
 
-app.post('/signup',(req,res)=>{
+app.get('/',(req,res)=>{
+    res.send('get request made')
+})
+
+app.post('/',(req,res)=>{
     console.log(req.body)
-    res.send("dadada")
+    res.send('post request made')
 })
 
-app.listen(PORT, () => {
-    console.log(`Server running at port :${PORT}`)
+app.listen(PORT,()=>{
+    console.log(`server is up and running at ${PORT}`)
 })
-
