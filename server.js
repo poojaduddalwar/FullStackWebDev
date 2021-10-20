@@ -8,7 +8,7 @@ const token = "TOP_SECRET"
 app.use(express.json())
 
 //Array as Database
-let products = [{ name: "iPhone12 Case", price: "999",id:"1" }, { name: "iPhone13 Case", price: "1999",id:"2" }, { name: "iPhone13 Pro Case", price: "1499",id:"3" }]
+let products = [{ name: "iPhone12 Case", price: "999",id:"1" }, { name: "iPhone13 Case", price: "1999",id:"2" } , { name: "iPhone13 Pro Case", price: "1499",id:"3" }]
 
 //Middlewares
 const validator = (req, res, next) => {
@@ -63,19 +63,12 @@ app.post('/products/add',isAuthorised, validator, (req, res) => {
     res.send({ products })
 })
 
-app.post('/products/delete',(req,res)=>{
+app.delete('/products/delete',isAuthorised,(req,res)=>{
     const {id} = req.body
-    // res.send(products.id)
-    products.forEach(obj => {
-        if(id === obj.id){
-            products.splice(obj,1)
-            res.send({products})
-        }
-        else {
-            // res.send('incorrect id')
-            res.send({products})
-        }
-    });
+    const newproducts = products.filter(item => item.id != id)
+    res.send({newproducts})
+    products = newproducts
+
 })
 
 ////-----------------------------AUTHENTICATION ROUTE FOR ACCESSING PRIVATE ROUTE--------------------------------
