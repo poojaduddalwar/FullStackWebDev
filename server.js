@@ -5,7 +5,7 @@ const app = express()
 const PORT = 3001
 app.use(express.json())
 
-app.use('/category',categoryRoutes)
+app.use('/category', categoryRoutes)
 
 // app.get("/",(req,res)=>{
 //     try {
@@ -16,6 +16,6 @@ app.use('/category',categoryRoutes)
 // })
 
 
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
     console.log('Listening to PORT 3001')
 })
