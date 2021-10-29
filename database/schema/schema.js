@@ -1,20 +1,20 @@
 //schema is just a blueprint
 // Products 
 /*
-ID: id
-Name: String
-Price: Number
-Category: Category_id
+id: id
+name: String
+price: Number
+category_name: Category_name
 */
 
 //Category
 /*
 id: id
-Name: String
+name: String
 */
 
 //Order
 /*
-Total Price: Number
-Product: Array of Products [Product_ID]
+total_price: Number
+product: Array of Products [Product_ID]
 */

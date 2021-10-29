@@ -31,14 +31,14 @@ METHOD : POST
 */
 
 router.post('/add', (req, res) => {
-    const { Name } = req.body
+    const { name } = req.body
     let newCategory = {
-        Name,
+        name,
         id: uuidv4()
     }
 
     try {
-        let include = database.categories.find(item => item.Name === Name)
+        let include = database.categories.find(item => item.name === name)
         if (!include) database.categories.push(newCategory)
         else console.log('Already exixts')
         res.status(200).json({
@@ -93,8 +93,8 @@ router.put('/update/:id',(req,res)=>{
         let element = database.categories.find(item => item.id === id)
         const index = database.categories.indexOf(element)
         console.log(index)
-        const {Name} = req.body
-        database.categories[index].Name = Name
+        const {name} = req.body
+        database.categories[index].name = name
         res.json({
             categories: database.categories,
             message: "Successfully updated the category",
