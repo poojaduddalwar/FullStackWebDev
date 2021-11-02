@@ -81,7 +81,7 @@ router.delete('/delete/:id', (req, res) => {
 
         const newProducts = database.products.filter(item => item.id !== id)
         database.products = newProducts
-        console.log(products)
+        console.log(database.products)
 
         res.status(200).json({
             products: database.products,
@@ -89,7 +89,8 @@ router.delete('/delete/:id', (req, res) => {
             status: 'SUCCESS'
         })
     } catch (error) {
-        res.status(200).json({
+        console.log(error)
+        res.json({
             products: [],
             message: error.message,
             status: "FAILED"
