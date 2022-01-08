@@ -18,23 +18,32 @@
     
     <title>BootStrap</title>
     <style>
-        div{
-            min-height: 50px;
+        div.row{
+            background-color: black;
+        }
+        div.row div{
+            background-color: rgb(240, 224, 8);
+            /* margin: 10px; */
         }
     </style>
 </head>
 <body>
 
-    <!-- 
-        <576 width- 100%
-        576-768 width- 540px
-        768-992 width- 720px
-        992-1200 width- 1140px
-     -->
+     <div class="container-lg">
+        <div class="row">
+          <div class="col-sm-3 border border-4 border-danger">Column</div>
+          <div class="col-sm-9 border border-4 border-danger">Column</div>
+          <div class="col-sm-2 border border-4 border-danger">Column</div>
+          <div class="col-sm-10 border border-4 border-danger">Column</div>
+          <div class="col-sm-7 border border-4 border-danger">Column</div>
+          <div class="col-sm-5 border border-4 border-danger">Column</div>
+          <div class="col-sm-6 border border-4 border-danger">Column</div>
+          <div class="col-sm-6 border border-4 border-danger">Column</div>
+          <div class="col-sm-4 border border-4 border-danger">Column</div>
+          <div class="col-sm-8 border border-4 border-danger">Column</div>
+        </div>
 
-     <div class="container-lg bg-primary p-2">
-         <div class="w-25 bg-info m-2 d-none d-md-inline-block"></div>
-         <div class="w-50 bg-info m-2 d-inline-block"></div>
-     </div>
+        <!-- a row contains 12 columns . so if you give the div a class of col-1 means the div will of 1 12th of the row -->
+      </div>
 </body>
 </html>
